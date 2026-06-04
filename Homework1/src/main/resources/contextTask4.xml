@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="databaseStorage" class="com.task4.DatabaseStorage"/>
+    <bean id="fileStorage" class="com.task4.FileStorage"/>
+
+    <bean id="userDB" class="com.task4.WeakUser">
+        <constructor-arg ref = "databaseStorage"/>
+    </bean>
+
+    <bean id="userFile" class="com.task4.WeakUser">
+        <constructor-arg ref="fileStorage"/>
+    </bean>
+</beans>
