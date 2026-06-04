@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean id="student1" class="com.task2.Student" init-method="initGroup">
+        <constructor-arg value="Petro"/>
+        <property name="age" value="20"/>
+    </bean>
+
+    <bean id="student2" class="com.task2.Student" init-method="initGroup">
+        <constructor-arg value="Artem"/>
+        <property name="age" value="21"/>
+    </bean>
+
+    <util:map id="studentsMap" map-class="java.util.HashMap">
+        <entry key="1" value="student1"/>
+        <entry key="2" value="student2"/>
+    </util:map>
+
+</beans>
