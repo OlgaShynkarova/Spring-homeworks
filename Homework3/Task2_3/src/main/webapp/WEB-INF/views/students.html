@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Список студентів</title>
+</head>
+<body>
+<h2>Список студентів:</h2>
+<ul>
+    <li th:each="st : ${students}" th:text="${st}"></li>
+</ul>
+<a th:href="@{/}">Повернутися на головну</a>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Результат</title>
+</head>
+<body>
+<p th:text="${message}"></p>
+<p>Кількість студентів: <span th:text="${count}"></span></p>
+<a th:href="@{/}">Повернутися на головну</a>
+</body>
+</html>

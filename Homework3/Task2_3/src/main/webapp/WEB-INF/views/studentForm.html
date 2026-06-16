@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Форма студента</title>
+</head>
+<body>
+<h2>Додати студента</h2>
+<form th:action="@{/saveStudent}" method="post">
+    <input type="text" name="name" placeholder="Ім'я"/>
+    <input type="number" name="age" placeholder="Вік"/>
+    <button type="submit">Відправити</button>
+</form>
+
+<h2>Переглянути всіх студентів</h2>
+<form th:action="@{/showStudents}" method="get">
+    <button type="submit">Показати студентів</button>
+</form>
+</body>
+</html>
